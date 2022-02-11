@@ -34,7 +34,7 @@ layout: default
     
     
     
-      <form method="POST" action="https://api-staticman.herokuapp.com/v2/entry/yarastu/222/master/rating">
+      <form method="POST" action="{{- site.bridge--api_url_rating -}}">
         <input type="hidden" name="options[slug]" value="{{ page.slug }}">
         <input name="fields[vote]" type="hidden" value="1">
         <button type="submit">Go!</button>
@@ -49,9 +49,6 @@ layout: default
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
-
-  <!-- add the button! -->
-  <applause-button url="{{ page.url | relative_url }}" style="width: 58px; height: 58px;"/>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
