@@ -34,8 +34,8 @@ theme: minima
 plugins:
   - jekyll-feed
 
-bridge--api_url_comments: "https://bridge--api.herokuapp.com/v2/entry/yarastu/update/gh-pages/comments"
-bridge--api_url_rating: "https://bridge--api.herokuapp.com/v2/entry/yarastu/update/gh-pages/rating"
+bridge--api_url_comments: "https://bridge--api.herokuapp.com/v2/entry/yarastu/update/master/comments"
+bridge--api_url_rating: "https://bridge--api.herokuapp.com/v2/entry/yarastu/update/master/rating"
 
 timezone: Europe/Moscow
 
