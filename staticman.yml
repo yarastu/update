@@ -16,7 +16,7 @@ rating:
   branch: gh-pages
 
   # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "Rating Star from {fields.name} on {options.slug}"
+  commitMessage: "Vote on {options.slug}"
 
   # (*) REQUIRED
   #
@@ -55,7 +55,7 @@ comments:
   branch: gh-pages
 
   # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "Comment from {fields.name} on {options.slug}"
+  commitMessage: "Comment on {options.slug}"
 
   # (*) REQUIRED
   #
