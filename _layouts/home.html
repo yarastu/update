@@ -37,9 +37,9 @@ layout: default
         <div>
           
           {% if site.data.rating[post.slug].size > 1 %} 
- 
-            {% assign like = site.data.rating[post.slug] | where: "vote", "1" | size -%}
-            {% assign dislike = site.data.rating[post.slug] | where: "vote", "2" | size -%}
+            Rate: 
+            {% assign like = site.data.rating[post.slug] | where: "vote", "1" | size %}
+            {% assign dislike = site.data.rating[post.slug] | where: "vote", "2" | size %}
             
             {{- like | minus: dislike -}}
             
@@ -47,6 +47,10 @@ layout: default
             0  
           {% endif %}
           
+        </div>
+        
+        <div>
+          Comments: {{ site.data.comments[post.slug] | size }}
         </div>
         
       </li>

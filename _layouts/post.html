@@ -28,6 +28,7 @@ layout: default
         {% endfor %}
       {%- endif -%}</p>
       {% include reading-time.html %}
+      <span>/ Comments: {{ site.data.comments[page.slug] | size }}</span>
   </header>
   
   <div class="post-content e-content" itemprop="articleBody">
