@@ -16,6 +16,10 @@ layout: default
   {% endif %}
 
 
+<h2>Случайный пост</h2>
+{% assign random = site.time | date: "%s%N" | modulo: site.posts.size %}
+<h3><a href="{{ site.posts[random].url }}">{{ site.posts[random].title }}</a></h3>
+
   {%- if posts.size > 0 -%}
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
@@ -37,7 +41,7 @@ layout: default
             {% assign like = site.data.rating[post.slug] | where: "vote", "1" | size -%}
             {% assign dislike = site.data.rating[post.slug] | where: "vote", "2" | size -%}
             
-            {{ like | minus: dislike }}
+            {{- like | minus: dislike -}}
             
           {%- else -%}  
             0  
