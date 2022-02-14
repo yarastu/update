@@ -36,7 +36,7 @@ layout: default
     
     
     
-    <form method="POST" action="{{- site.bridge--api_url_rating -}}">
+    <form class="js-form form" method="POST" action="{{- site.bridge--api_url_rating -}}">
       <input type="hidden" name="options[slug]" value="{{ page.slug }}">
       <input name="fields[vote]" type="hidden" value="1">
       <button type="submit">Go!</button>
